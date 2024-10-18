@@ -199,8 +199,19 @@
     <p><img src="https://raw.githubusercontent.com/upupupY/upupupy_image/main/images/2024-10-16-20-54-28.jpg" alt="2024-10-16-20-54-28"></p>
 <h2 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h2><p>：为什么突然想搞一个这样的东西？<br>：一是在追星（肖战）的过程中，买了相关代言，打上属于自己的水印，别人也偷不了图（追星人懂得都懂）。二是在求职面试过程中，少不了需要提供身份证、四六级、学历学籍等图片信息，涉及隐私，打上水印，仅用于面试。三是将所学输出个小成品。</p>
 <p>功能清单：<br>可选项：文字水印、图片水印<br>水印范围：密密麻麻、宽松<br>水印设置：水印大小、角度、透明度</p>
-<p>呈现方式：小程序、静态网站（自适应）</p>
-<p>使用技术：canvas绘图+图片上传下载</p>
+<p>呈现方式：小程序&#x2F;静态网站（自适应）</p>
+<p>使用技术：</p>
+<ul>
+<li>canvas绘图</li>
+<li>input:type&#x3D;file 选中需要水印的图片</li>
+<li>pc端创建新的a标签进行图片下载–会不会存在url过长，浏览器的限制，导致无法下载</li>
+<li>app端似乎不能使用创建新标签的方式进行图片的下载</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>canvas绘制图片画质模糊 —— devicePixelRatio分辨率问题 canvas和css</li>
+<li>下载canvas模糊（可能是由于绘制图片时不高清，导致下载的时候，也不高清？）</li>
+<li>下载后图片比例与原图不一致</li>
+</ol>
 <style >
   #main-content{
     font-family:'Noto Serif SC', serif !important
